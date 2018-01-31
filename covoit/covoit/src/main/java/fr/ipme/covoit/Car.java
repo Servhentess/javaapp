@@ -20,8 +20,12 @@ public class Car {
 	private Trip trip;
     @Transient
 	private Brand brand;
-	
-	/**
+
+    /**
+     * blaaaaaaaaaaaaaaaaaaa
+     */
+
+    /**
 	 * Constructeur par defaut
 	 */
 	public Car() {
