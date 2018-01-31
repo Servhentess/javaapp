@@ -1,3 +1,4 @@
+package fr.ipme.covoit;
 
 public class User {
 	

@@ -1,3 +1,5 @@
+package fr.ipme.covoit;
+
 public enum Brand {
 	PEUGEOT,
 	CITROEN,

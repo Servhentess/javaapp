@@ -1,14 +1,24 @@
+package fr.ipme.covoit;
 
+import javax.persistence.*;
+
+@Entity
 public class Car {
 	
 	/**
 	 * Definition des variables
 	 */
+	@Id
+    @GeneratedValue
 	private int id;
+	@Column(name="model")
 	private String model;
+	@Column(name="nbrDePlace")
 	private int nbrDePlace;
-	
+
+	@Transient
 	private Trip trip;
+	@Transient
 	private Brand brand;
 	
 	/**

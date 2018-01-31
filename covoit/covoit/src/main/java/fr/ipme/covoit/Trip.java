@@ -1,3 +1,4 @@
+package fr.ipme.covoit;
 
 public class Trip {
 	
@@ -6,6 +7,8 @@ public class Trip {
 	 */
 	private int id;
 	private double price;
+
+	private User user;
 	
 	/**
 	 * Constructeur par defaut	
@@ -41,5 +44,11 @@ public class Trip {
 	}
 	public void setPrice(double price) {
 		this.price = price;
+	}
+	public User getUser() {
+		return user;
+	}
+	public void setUser(User user) {
+		this.user = user;
 	}
 }
