@@ -18,7 +18,7 @@ public class Car {
 
 	@OneToOne
 	private Trip trip;
-	@OneToOne
+    @Transient
 	private Brand brand;
 	
 	/**
