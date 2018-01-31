@@ -1,6 +1,7 @@
 package fr.ipme.covoit;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 public class User {
@@ -18,6 +19,8 @@ public class User {
 
 	@OneToOne
 	private Car car;
+	@ManyToMany
+	private List<Trip> trip;
 
 	/**
 	 * Constructeur par defaut
@@ -65,5 +68,11 @@ public class User {
 	}
 	public void setCar(Car car) {
 		this.car = car;
+	}
+	public List<Trip> getTrip() {
+		return trip;
+	}
+	public void setTrip(List<Trip> trip) {
+		this.trip = trip;
 	}
 }

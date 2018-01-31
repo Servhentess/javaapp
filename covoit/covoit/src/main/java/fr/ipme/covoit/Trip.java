@@ -1,6 +1,7 @@
 package fr.ipme.covoit;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 public class Trip {
@@ -14,8 +15,8 @@ public class Trip {
 	@Column
 	private double price;
 
-	@OneToOne
-	private User user;
+	@ManyToMany
+	private List<User> user;
 	
 	/**
 	 * Constructeur par defaut	
@@ -52,10 +53,10 @@ public class Trip {
 	public void setPrice(double price) {
 		this.price = price;
 	}
-	public User getUser() {
+	public List<User> getUser() {
 		return user;
 	}
-	public void setUser(User user) {
+	public void setUser(List<User> user) {
 		this.user = user;
 	}
 }

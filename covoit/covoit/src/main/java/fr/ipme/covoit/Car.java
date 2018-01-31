@@ -18,12 +18,8 @@ public class Car {
 
 	@OneToOne
 	private Trip trip;
-    @Transient
+    @Column
 	private Brand brand;
-
-    /**
-     * blaaaaaaaaaaaaaaaaaaa
-     */
 
     /**
 	 * Constructeur par defaut
