@@ -11,14 +11,14 @@ public class Car {
 	@Id
     @GeneratedValue
 	private int id;
-	@Column(name="model")
+	@Column
 	private String model;
-	@Column(name="nbrDePlace")
+	@Column
 	private int nbrDePlace;
 
-	@Transient
+	@OneToOne
 	private Trip trip;
-	@Transient
+	@OneToOne
 	private Brand brand;
 	
 	/**

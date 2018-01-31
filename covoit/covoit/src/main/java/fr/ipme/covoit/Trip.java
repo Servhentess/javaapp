@@ -1,13 +1,20 @@
 package fr.ipme.covoit;
 
+import javax.persistence.*;
+
+@Entity
 public class Trip {
 	
 	/**
 	 * Definition des variables
 	 */
+	@Id
+	@GeneratedValue
 	private int id;
+	@Column
 	private double price;
 
+	@OneToOne
 	private User user;
 	
 	/**

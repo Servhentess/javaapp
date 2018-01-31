@@ -1,14 +1,22 @@
 package fr.ipme.covoit;
 
+import javax.persistence.*;
+
+@Entity
 public class User {
 	
 	/**
 	 * Definition des variables
 	 */
+	@Id
+	@GeneratedValue
 	private int id;
+	@Column
 	private String name;
+	@Column
 	private String password;
-	
+
+	@OneToOne
 	private Car car;
 
 	/**
