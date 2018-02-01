@@ -1,4 +1,4 @@
-package fr.ipme.covoit;
+package fr.ipme.covoit.model;
 
 import javax.persistence.*;
 import java.util.List;

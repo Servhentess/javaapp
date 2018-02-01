@@ -1,4 +1,4 @@
-package fr.ipme.covoit;
+package fr.ipme.covoit.model;
 
 import javax.persistence.*;
 
@@ -9,7 +9,7 @@ public class Car {
 	 * Definition des variables
 	 */
 	@Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.AUTO)
 	private int id;
 	@Column
 	private String model;
