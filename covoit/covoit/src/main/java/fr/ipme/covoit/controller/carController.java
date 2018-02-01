@@ -19,7 +19,7 @@ public class carController {
         return repository.findAll();
     }
 
-    @GetMapping("/(id)")
+    @GetMapping("/{id}")
     public Car get(@PathVariable int id) {
         Car car = repository.getOne(id);
         return car;
@@ -29,5 +29,20 @@ public class carController {
     public Car create(@RequestBody Car car){
         Car createdCar = repository.save(car);
         return createdCar;
+    }
+
+    @PutMapping("/{id}")
+    public Car update(@PathVariable int id, @RequestBody Car car){
+        Car savedCar = repository.getOne(id);
+        if (savedCar != null){
+            car.setId(savedCar.getId());
+            savedCar = repository.save(car);
+        }
+        return savedCar;
+    }
+
+    @DeleteMapping("/{id}")
+    public void delete(@PathVariable int id){
+        repository.delete(id);
     }
 }
