@@ -1,7 +1,7 @@
 package fr.ipme.covoit.controller;
 
 import fr.ipme.covoit.model.Car;
-import fr.ipme.covoit.repository.carRepository;
+import fr.ipme.covoit.repository.CarRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -9,10 +9,10 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/cars")
-public class carController {
+public class CarController {
 
     @Autowired
-    private carRepository repository;
+    private CarRepository repository;
 
     @GetMapping
     public List<Car> List(){
