@@ -1,6 +1,7 @@
 package fr.ipme.covoit.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonView;
 
 import javax.persistence.*;
 import java.util.List;
@@ -22,6 +23,7 @@ public class User {
 
 	@OneToOne
 	private Car car;
+	@JsonView(User.class)
 	@ManyToMany
 	private List<Trip> trip;
 

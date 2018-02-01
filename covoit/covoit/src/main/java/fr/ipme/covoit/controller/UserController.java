@@ -1,5 +1,6 @@
 package fr.ipme.covoit.controller;
 
+import com.fasterxml.jackson.annotation.JsonView;
 import fr.ipme.covoit.model.User;
 import fr.ipme.covoit.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,6 +16,7 @@ public class UserController {
     private UserRepository repository;
 
     @GetMapping
+    @JsonView(User.class)
     public List<User> List(){
 
         return repository.findAll();

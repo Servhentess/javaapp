@@ -1,5 +1,6 @@
 package fr.ipme.covoit.controller;
 
+import com.fasterxml.jackson.annotation.JsonView;
 import fr.ipme.covoit.model.Trip;
 import fr.ipme.covoit.repository.TripRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,6 +16,7 @@ public class TripController {
     public TripRepository repository;
 
     @GetMapping
+    @JsonView(Trip.class)
     public List<Trip> list(){
 
         return repository.findAll();

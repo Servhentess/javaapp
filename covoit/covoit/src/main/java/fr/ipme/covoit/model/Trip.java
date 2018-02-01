@@ -1,6 +1,8 @@
 package fr.ipme.covoit.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonView;
 
 import javax.persistence.*;
 import java.util.List;
@@ -18,6 +20,7 @@ public class Trip {
 	@Column
 	private double price;
 
+	@JsonView(Trip.class)
 	@ManyToMany
 	private List<User> user;
 	
