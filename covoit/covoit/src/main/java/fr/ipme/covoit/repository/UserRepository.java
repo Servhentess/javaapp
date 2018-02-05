@@ -8,7 +8,5 @@ import java.util.List;
 
 public interface UserRepository extends JpaRepository<User, Integer>{
 
-    public List<User> findAllByName (String name);
-
-    public List<User> findAllByCar (Car car);
+    List<User> findAllByCar (Car car);
 }
