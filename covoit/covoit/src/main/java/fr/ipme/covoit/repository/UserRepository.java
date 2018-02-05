@@ -10,5 +10,7 @@ public interface UserRepository extends JpaRepository<User, Integer>{
 
     public List<User> findAllByName (String name);
 
-    public User findByCar (Car car);
+    //public User findByCar (Car car);
+
+    public List<User> findAllByCar (Car car);
 }

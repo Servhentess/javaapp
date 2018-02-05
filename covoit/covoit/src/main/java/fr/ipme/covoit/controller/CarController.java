@@ -22,7 +22,7 @@ public class CarController {
 
     @GetMapping
     @JsonView(Car.class)
-    public List<Car> List(){
+    public List<Car> List() {
         return carRepository.findAll();
     }
 
@@ -57,9 +57,16 @@ public class CarController {
     @DeleteMapping("/{id}")
     public void delete(@PathVariable int id){
         /*Destruction de la voiture inscrite sur un user*/
-        User user =  userRepository.findByCar(carRepository.getOne(id));
+        /*User user =  userRepository.findByCar(carRepository.getOne(id));
         user.setCar(null);
-        userRepository.save(user);
+        userRepository.save(user);*/
+
+        List<User> userList= userRepository.findAllByCar(carRepository.getOne(id));
+        for (User user : userList) {
+            user.setCar(null);
+        }
+
+        userRepository.save(userList);
 
         /*suppression de la voiture*/
         carRepository.delete(id);
