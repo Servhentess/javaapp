@@ -1,5 +1,6 @@
 package fr.ipme.covoit.controller;
 
+import com.fasterxml.jackson.annotation.JsonView;
 import fr.ipme.covoit.model.City;
 import fr.ipme.covoit.repository.CityRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,6 +16,7 @@ public class CityController {
     private CityRepository repository;
 
     @GetMapping
+    @JsonView(City.class)
     public List<City> List(){
 
         return repository.findAll();

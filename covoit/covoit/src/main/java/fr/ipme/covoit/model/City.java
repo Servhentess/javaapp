@@ -56,11 +56,9 @@ public class City {
 	public void setName(String name) {
 		this.name = name;
 	}
-
 	public Trip getTrip() {
 		return trip;
 	}
-
 	public void setTrip(Trip trip) {
 		this.trip = trip;
 	}
