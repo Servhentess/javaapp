@@ -57,10 +57,6 @@ public class CarController {
     @DeleteMapping("/{id}")
     public void delete(@PathVariable int id){
         /*Destruction de la voiture inscrite sur un user*/
-        /*User user =  userRepository.findByCar(carRepository.getOne(id));
-        user.setCar(null);
-        userRepository.save(user);*/
-
         List<User> userList= userRepository.findAllByCar(carRepository.getOne(id));
         for (User user : userList) {
             user.setCar(null);
